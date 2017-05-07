@@ -5,7 +5,7 @@ Written By: Warith Eddine DJEDDI (waritheddine@yahoo.fr)
             Sadok BEN YAHIA (sadok.benyahia@fst.rnu.tn)
             Engelbert MEPHU NGUIFO (mephu@isima.fr)
 
-This README describes the usage of the command line interface of MAPPIN.
+This README describes the usage of the command line interface of MAPPIN. It is worth mentioning that our approach is based on NetCoffee.
 
 The executable MAPPIN is compiled for Linux x86_64 platform.
 
