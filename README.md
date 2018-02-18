@@ -76,7 +76,7 @@ pairwise alignment of two input networks. The multiple case is similar.
      under the "MAPPIN\data" folder. The name should be "gene_ontology.1_2.obo" under the data folder.
 
 
-  (2.4) GO annotation file which contains GO annotations for proteins in the input networks. The format of this GO annotation file is compliant with the GO consortium.
+  (2.4) GO annotation file which contains GO annotations for proteins in the input networks. The format of this GO annotation file should be compliant with the GO consortium.
      
     A) File: goa_uniprot_gcrp.gaf → This set contains all GO annotations for canonical accessions
       from the UniProt reference proteomes for all species, which provide one protein per gene.
@@ -84,8 +84,7 @@ pairwise alignment of two input networks. The multiple case is similar.
     B) Files: goa_<species>.gaf for each species → This set contains all GO annotations for canonical accessions 
       from the UniProt reference proteome for the species, which provides one protein per gene. 
       
-      IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/goa/downloads" 
- and uncompress them under the "MAPPIN\data\goa" folder.
+      IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/goa/downloads" and uncompress them under the "MAPPIN\data\goa" folder.
 
 (3) Create a file that specifies the file locations, species names etc.
    In the folder config/, the file "policy.input".
@@ -179,10 +178,10 @@ pairwise alignment of two input networks. The multiple case is similar.
        (6.1) Download MAPPIN freely available at Github website: https://github.com/waritheddine/MAPPIN
 
        (6.2) Run MAPPIN on our test dataset with command:
-       ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
+       ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -bscore true -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
 
        (6.3)Then you can find the all the involved output files in ./result/ . There are many other functions which you can see with "-help" option.
        (6.4) We note that checking the format of the files in the data folder after reading the execution instructions above might be quite helpful.
        (6.5) For this example, download the gene annotation file (goa_fly.gaf.gz, goa_worm.gaf.gz and goa_yeast.gaf.gz) for the three species 
-       (Fly, Worm and Yeast) from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" and uncompress them under the "MAPPIN\data\GOA" folder. In addition, dowload the compress file "goa_uniprot_gcrp.gaf.tar.gz" from the same Url, and also uncompress it under the "MAPPIN\data\GOA" folder.
+       (Fly, Worm and Yeast) from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" and uncompress them under the "MAPPIN\data\GOA" folder. In addition, download the compress file "goa_uniprot_gcrp.gaf.tar.gz" from the same Url, and also uncompress it under the "MAPPIN\data\GOA" folder.
        Finally, download gene ontology file from the Website "http://www.geneontology.org/" and uncompress it under the "MAPPIN\data" folder.
