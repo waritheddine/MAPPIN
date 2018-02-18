@@ -1,8 +1,8 @@
 # MAPPIN
 MAPPIN (Multiple Alignment for Protein Protein Interactions Networks) a global many-to-many alignment of multiple PPINs from different species.
 
-Written By: Warith Eddine DJEDDI (waritheddine@yahoo.fr)
-            Sadok BEN YAHIA (sadok.benyahia@fst.rnu.tn)
+Written By: Warith Eddine DJEDDI (waritheddine@yahoo.fr),
+            Sadok BEN YAHIA (sadok.benyahia@fst.rnu.tn) and
             Engelbert MEPHU NGUIFO (mephu@isima.fr)
 
 This README describes the usage of the command line interface of MAPPIN. It is worth mentioning that our approach is based on NetCoffee.
@@ -84,15 +84,14 @@ pairwise alignment of two input networks. The multiple case is similar.
     B) Files: goa_<species>.gaf for each species → This set contains all GO annotations for canonical accessions 
       from the UniProt reference proteome for the species, which provides one protein per gene. 
       
-
- IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" 
+      IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" 
  and uncompress them under the "MAPPIN\data\GOA" folder.
 
 (3) Create a file that specifies the file locations, species names etc.
    In the folder config/, the file "policy.input".
 
-   For example, suppose we have three PPI networks:a.net, b.net, c.net, GO association file for the 3 species: a.gaf, b.gaf, c.gaf,
-   six balst evalue (or bitscore) files: a-a.cf, a-b.cf,...,c-c.cf, then the policy file should looks like:
+   For example, suppose we have three PPI networks: a.net, b.net, c.net, GO association file for the 3 species: a.gaf, b.gaf, c.gaf,
+   six blast evalue (or bitscore) files: a-a.cf, a-b.cf,...,c-c.cf, then the policy file should looks like:
 
           --------------BEGIN OF POLICY--------------
                     PARAMETER VALUE
@@ -116,8 +115,12 @@ pairwise alignment of two input networks. The multiple case is similar.
  
 
 (4) Call the code. Here are samples:
-
-   ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
+    
+   (4.1) Network files using blast e-value:
+      ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
+    
+   (4.2) Network files using blast bitscore:
+      ./mappin -alignment -alpha 0.3 -bscore true -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
 
    The options are as follows (you can also use the "-h" or "--help" flag):
 
