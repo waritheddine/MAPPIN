@@ -117,9 +117,11 @@ pairwise alignment of two input networks. The multiple case is similar.
 (4) Call the code. Here are samples:
     
    (4.1) Network files using blast e-value:
+      
       ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
     
    (4.2) Network files using blast bitscore:
+      
       ./mappin -alignment -alpha 0.3 -bscore true -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
 
    The options are as follows (you can also use the "-h" or "--help" flag):
