@@ -24,9 +24,9 @@ pairwise alignment of two input networks. The multiple case is similar.
     nodes) in a single directory. You'll need 5 files:
 
   (2.1) Network files:
-     You'll need A.net and B.net , tab-separated files
+     You'll need A.pin and B.pin , tab-separated files
      where each line contains an interaction. For example, the first 5 lines of
-     A.net are:
+     A.pin are:
 
      ====== BEGIN ========
      INTERACTOR_A INTERACTOR_B
@@ -91,7 +91,7 @@ pairwise alignment of two input networks. The multiple case is similar.
    In the folder config/, the file "policy.input".
 
    For example, suppose we have three PPI networks: a.pin, b.pin, c.pin, GO association file for the 3 species: a.gaf, b.gaf, c.gaf,
-   six blast e-value (or bitscore) files: a-a.sim, a-b.sim,...,c-c.sim, then the policy file should looks like:
+   six blast e-value (or bitscore) files: a-a.sim, a-b.sim, ..., c-c.sim, then the policy file should looks like:
 
           --------------BEGIN OF POLICY--------------
                     PARAMETER VALUE
@@ -122,7 +122,7 @@ pairwise alignment of two input networks. The multiple case is similar.
     
    (4.2) Network files using blast bitscore:
       
-      ./mappin -alignment -alpha 0.3 -bscore true -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
+      ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -bscore true -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
 
    The options are as follows (you can also use the "-h" or "--help" flag):
 
