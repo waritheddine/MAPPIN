@@ -47,15 +47,15 @@ pairwise alignment of two input networks. The multiple case is similar.
      You'll need to perform an the all-against-all run
      of BLAST between all the nodes of the two networks. You should store the results in 3 files:
 
-        A-B.evals,  A-A.evals, B-B.evals
+        A-B.sim,  A-A.sim, B-B.sim
 
      The files contain, as their names indicate, the results of BLAST runs
      between species A & B, A & A, and B & B, respectively. IMPORTANT: for
      files containing Blast scores between two species, the filename should
-     have the species names in lexicographic order, i.e., A-B.evals is
-     expected, not B-A.evals.
+     have the species names in lexicographic order, i.e., A-B.sim is
+     expected, not B-A.sim.
 
-     The first 5 lines of the A-B.evals file are:
+     The first 5 lines of the A-B.sim file are:
 
      ====== BEGIN ========
      a0      b0      1
@@ -84,29 +84,29 @@ pairwise alignment of two input networks. The multiple case is similar.
     B) Files: goa_<species>.gaf for each species → This set contains all GO annotations for canonical accessions 
       from the UniProt reference proteome for the species, which provides one protein per gene. 
       
-      IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" 
- and uncompress them under the "MAPPIN\data\GOA" folder.
+      IMPORTANT: Download gene annotation files for each species from the Uniprot Website "http://www.ebi.ac.uk/goa/downloads" 
+ and uncompress them under the "MAPPIN\data\goa" folder.
 
 (3) Create a file that specifies the file locations, species names etc.
    In the folder config/, the file "policy.input".
 
-   For example, suppose we have three PPI networks: a.net, b.net, c.net, GO association file for the 3 species: a.gaf, b.gaf, c.gaf,
-   six blast evalue (or bitscore) files: a-a.cf, a-b.cf,...,c-c.cf, then the policy file should looks like:
+   For example, suppose we have three PPI networks: a.pin, b.pin, c.pin, GO association file for the 3 species: a.gaf, b.gaf, c.gaf,
+   six blast e-value (or bitscore) files: a-a.sim, a-b.sim,...,c-c.sim, then the policy file should looks like:
 
           --------------BEGIN OF POLICY--------------
                     PARAMETER VALUE
-                    network   dataset/a.net
-                    network   dataset/b.net
-                    network   dataset/c.net
+                    network   dataset/a.pin
+                    network   dataset/b.pin
+                    network   dataset/c.pin
                     goafile   data/goa/a.gaf
                     goafile   data/goa/b.gaf
                     goafile   data/goa/c.gaf
-                    efile     dataset/a-a.cf
-                    efile     dataset/a-b.cf
-                    efile     dataset/a-c.cf
-                    efile     dataset/b-b.cf
-                    efile     dataset/b-c.cf
-                    efile     dataset/c-c.cf
+                    efile     dataset/a-a.sim
+                    efile     dataset/a-b.sim
+                    efile     dataset/a-c.sim
+                    efile     dataset/b-b.sim
+                    efile     dataset/b-c.sim
+                    efile     dataset/c-c.sim
                     scorefile     dataset/score_composit.model
                     alignmentfile ./result/alignment_mappin.data
                     logfile       ./result/measure_time.txt
