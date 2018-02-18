@@ -73,7 +73,7 @@ pairwise alignment of two input networks. The multiple case is similar.
   (2.3)  Gene ontology (GO) File
  
      IMPORTANT: Download gene ontology file from the Website "http://www.geneontology.org/" and uncompress it 
-     under the "MAPPIN\data" folder.
+     under the "MAPPIN\data" folder. The name should be "gene_ontology.1_2.obo" under the data folder.
 
 
   (2.4) GO annotation file which contains GO annotations for proteins in the input networks. The format of this GO annotation file is compliant with the GO consortium.
