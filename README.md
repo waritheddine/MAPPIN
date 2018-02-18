@@ -178,10 +178,10 @@ pairwise alignment of two input networks. The multiple case is similar.
        (6.1) Download MAPPIN freely available at Github website: https://github.com/waritheddine/MAPPIN
 
        (6.2) Run MAPPIN on our test dataset with command:
-       ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 3 -bscore true -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
+       ./mappin -alignment -alpha 0.3 -nmax 1000 -temp 50 -thr 0.3 -numspecies 8 -bscore true -numthreads 8 -alignmentfile ./result/alignment_mappin.data -resultfolder ./result/
 
        (6.3)Then you can find the all the involved output files in ./result/ . There are many other functions which you can see with "-help" option.
        (6.4) We note that checking the format of the files in the data folder after reading the execution instructions above might be quite helpful.
-       (6.5) For this example, download the gene annotation file (goa_fly.gaf.gz, goa_worm.gaf.gz and goa_yeast.gaf.gz) for the three species 
-       (Fly, Worm and Yeast) from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" and uncompress them under the "MAPPIN\data\GOA" folder. In addition, download the compress file "goa_uniprot_gcrp.gaf.tar.gz" from the same Url, and also uncompress it under the "MAPPIN\data\GOA" folder.
+       (6.5) For this example, download the gene annotation file (goa_arabidopsis.gaf.gz, goa_worm.gaf.gz, goa_fly.gaf.gz, goa_ecoli.gaf.gz, goa_human.gaf.gz, goa_mouse.gaf.gz, goa_rat.gaf.gz, goa_yeast.gaf.gz) for the eight species 
+       (Arabidopsis, Worm, Fly, Ecoli, Human, Mouse, Rat and Yeast) from the Uniprot Website "http://www.ebi.ac.uk/GOA/downloads" and uncompress them under the "MAPPIN\data\GOA" folder. In addition, download the compress file "goa_uniprot_gcrp.gaf.tar.gz" from the same Url, and also uncompress it under the "MAPPIN\data\GOA" folder.
        Finally, download gene ontology file from the Website "http://www.geneontology.org/" and uncompress it under the "MAPPIN\data" folder.
